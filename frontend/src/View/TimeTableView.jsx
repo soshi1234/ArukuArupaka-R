@@ -1,23 +1,25 @@
 import React from 'react';
 import {Text, View,StyleSheet,useColorScheme,} from 'react-native';
+import WeekFram from '../component/TimeTable/WeekFrame';
+import ClassFrame from '../component/TimeTable/ClassFrame';
 
 const HelloWorldApp = () => {
   return (
     <View style={styles.bodys}>
       <View style={styles.tables}>
         <View style={styles.tableWeek}>
-          <Text style={styles.weeks}>Mon</Text>
-          <Text style={styles.weeks}>The</Text>
-          <Text style={styles.weeks}>Wed</Text>
-          <Text style={styles.weeks}>Thu</Text>
-          <Text style={styles.weeks}>Fri</Text>
+          <WeekFram weekDay={"Mon"}></WeekFram>
+          <WeekFram weekDay={"Tue"}></WeekFram>
+          <WeekFram weekDay={"Wed"}></WeekFram>
+          <WeekFram weekDay={"Thu"}></WeekFram>
+          <WeekFram weekDay={"Fri"}></WeekFram>
         </View>
         <View style={styles.tableKoma} >
-          <Text  style={styles.koma} ></Text>
-          <Text style={styles.koma}></Text>
-          <Text style={styles.koma}></Text>
-          <Text style={styles.koma}></Text>
-          <Text style={styles.koma}></Text>
+          <ClassFrame className="在力"/>
+          <ClassFrame className="在力"/>
+          <ClassFrame className="在力"/>
+          <ClassFrame className="在力"/>
+          <ClassFrame className="在力"/>
         </View>
         <View style={styles.tableKoma}>
           <Text style={styles.koma}>宇宙地球</Text>
