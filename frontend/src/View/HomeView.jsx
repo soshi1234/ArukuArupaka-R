@@ -14,12 +14,12 @@ const HomeView = (props) => {
   return (
     <View>
       <View>
-        <TouchableOpacity onPress={()=>{props.navigation.navigate('TimeTable')}}>
+        <TouchableOpacity onPress={()=>{props.navigation.navigate('Bike')}}>
           <Text>駐輪場</Text>
         </TouchableOpacity>
       </View>
       <View>
-          <TouchableOpacity onPress={()=>{props.navigation.navigate('Bike')}}>
+          <TouchableOpacity onPress={()=>{props.navigation.navigate('TimeTable')}}>
             <Text>教室通知</Text>
           </TouchableOpacity>
         </View>
