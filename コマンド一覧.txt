@@ -11,3 +11,9 @@
 	バックエンド作り始めたら書きます。
 
 git コマンド
+
+	提出
+	git add .
+	git commit -m "ここにコメント　名前"
+	(例、git commit -m "画面遷移のテンプレートを作成　そうし")
+	git push
