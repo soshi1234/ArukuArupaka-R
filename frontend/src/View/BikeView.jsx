@@ -9,7 +9,7 @@ const HelloWorldApp = () => {
         justifyContent: 'center',
         alignItems: 'center',
       }}>
-      <Text>Hello, 駐輪場です!</Text>
+      <Text>Hello, 駐輪場です!.</Text>
     </View>
   );
 };
