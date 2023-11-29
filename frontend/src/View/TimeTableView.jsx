@@ -19,7 +19,7 @@ const HelloWorldApp = () => {
           <ClassFrame className="在力"/>
           <ClassFrame className="在力"/>
           <ClassFrame className="在力"/>
-          <ClassFrame className="在力"/>
+          <ClassFrame className="在力a"/>
         </View>
         <View style={styles.tableKoma}>
           <Text style={styles.koma}>宇宙地球</Text>
