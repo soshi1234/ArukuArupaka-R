@@ -15,9 +15,9 @@ const HelloWorldApp = () => {
           <WeekFram weekDay={"Fri"}></WeekFram>
         </View>
         <View style={styles.tableKoma} >
-          <ClassFrame className="ローカルの変更"/>
           <ClassFrame className="在力"/>
-          <ClassFrame className="在力"/>
+          <ClassFrame className="在力リモートの変更"/>
+          <ClassFrame className="在力さ"/>
           <ClassFrame className="在力"/>
           <ClassFrame className="在力a"/>
         </View>
