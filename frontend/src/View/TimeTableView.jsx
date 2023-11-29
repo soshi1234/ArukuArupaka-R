@@ -16,7 +16,7 @@ const HelloWorldApp = () => {
         </View>
         <View style={styles.tableKoma} >
           <ClassFrame className="在力"/>
-          <ClassFrame className="在力"/>
+          <ClassFrame className="在力リモートの変更"/>
           <ClassFrame className="在力"/>
           <ClassFrame className="在力"/>
           <ClassFrame className="在力a"/>
