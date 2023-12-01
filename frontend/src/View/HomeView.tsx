@@ -57,7 +57,7 @@ const AppList = (props) => {
   return (
     <View style={{ height: 65, width: 140, borderColor: props.color, borderWidth: 2, borderRadius: 10, flexDirection: 'row', alignItems: 'center', margin: 10, padding: 3 }}>
       <TouchableOpacity onPress={() => { props.test.navigation.navigate(props.jumpPage)}}>
-        <Image style={{ width: 40, height: 40, margin: 10 }} source={{ uri: props.url }}></Image>
+       <Icon name={props.iconName} size={40} color={props.color} />
         <Text style={{ fontSize: 20, textAlign: 'center', left: '10%', fontFamily: 'Roboto' }}>{props.appName}</Text>
       </TouchableOpacity>
     </View>
@@ -228,7 +228,7 @@ const HomeView = (props) => {
         <View style={{ flex: 10 }}>
 
           <View style={styles.appListFlex}>
-            <AppList appName='駐輪場' color={OrangeCol} test={props} jumpPage="Bike" url='https://www.iconpacks.net/icons/1/free-bicycle-icon-1054-thumb.png'/>
+            <AppList appName='駐輪場' color={OrangeCol} test={props} jumpPage="Bike" iconName="bicycle"/>
             <AppList appName='天気' color={WarningCol}  url='https://icons.veryicon.com/png/o/miscellaneous/test-6/weather-91.png' />
           </View>
           <View style={styles.appListFlex}>
@@ -243,7 +243,7 @@ const HomeView = (props) => {
             <AppList appName='' color={DefaultCol} url='https://upload.wikimedia.org/wikipedia/commons/5/59/Empty.png' />
             <AppList appName='' color={DefaultCol} url='https://upload.wikimedia.org/wikipedia/commons/5/59/Empty.png' />
           </View>
-          <Icon name="bicycle" size={30} color="#900" />
+
         </View>
       </View>
     </SafeAreaView>
