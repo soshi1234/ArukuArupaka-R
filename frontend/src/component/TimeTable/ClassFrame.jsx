@@ -1,9 +1,10 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {Text, View,TouchableOpacity} from 'react-native';
+
 
 const ClassFrame = (props) => {
   return (
-    <View
+    <TouchableOpacity
       style={{
         color:'black',
         width:'20%',
@@ -15,12 +16,12 @@ const ClassFrame = (props) => {
         borderWidth: 1,
         borderColor: '#888888',
         borderRadius: 10, 
-      }}>
+      }}onPress={()=>{props.onEventCallBack()}}>
       <Text style={{
                 color:'black',
                 textAlign:'center', 
             }}>{props.className}</Text>
-    </View>
+    </TouchableOpacity>
   );
 };
 export default ClassFrame;

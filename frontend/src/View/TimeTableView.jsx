@@ -2,10 +2,16 @@ import React from 'react';
 import {Text, View,StyleSheet,useColorScheme,} from 'react-native';
 import WeekFram from '../component/TimeTable/WeekFrame';
 import ClassFrame from '../component/TimeTable/ClassFrame';
+import TimeTableInfo from '../component/TimeTable/TimeTableInfo';
+import {useState} from 'react'
 
-const HelloWorldApp = () => {
+const TimrTableView = () => {
+  const [isShow,setIsShow]=useState(false)
   return (
     <View style={styles.bodys}>
+      <View style={{left:'10%',top:110,}}>
+      {isShow && <TimeTableInfo onEventCallBack={()=>{setIsShow(false)}}/>}
+      </View>
       <View style={styles.tables}>
         <View style={styles.tableWeek}>
           <WeekFram weekDay={"Mon"}></WeekFram>
@@ -15,7 +21,7 @@ const HelloWorldApp = () => {
           <WeekFram weekDay={"Fri"}></WeekFram>
         </View>
         <View style={styles.tableKoma} >
-          <ClassFrame className="在力"/>
+          <ClassFrame week={1} time={1} className="在力" onEventCallBack={()=>{setIsShow(true)}}/>
           <ClassFrame className="在力リモートの変更"/>
           <ClassFrame className="在力さ"/>
           <ClassFrame className="在力"/>
@@ -129,4 +135,4 @@ const HelloWorldApp = () => {
     },
   });
 
-export default HelloWorldApp;
+export default TimrTableView;
