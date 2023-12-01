@@ -229,15 +229,15 @@ const HomeView = (props) => {
 
           <View style={styles.appListFlex}>
             <AppList appName='駐輪場' color={OrangeCol} test={props} jumpPage="Bike" iconName="bicycle"/>
-            <AppList appName='天気' color={WarningCol}  url='https://icons.veryicon.com/png/o/miscellaneous/test-6/weather-91.png' />
+            <AppList appName='天気' color={WarningCol}  iconName="weather-cloudy" />
           </View>
           <View style={styles.appListFlex}>
-            <AppList appName='マップ' color={BlueCol} url='https://cdn-icons-png.flaticon.com/512/3082/3082383.png' />
-            <AppList appName='時間割' color={GreenCol} test={props} jumpPage="TimeTable" url='https://cdn-icons-png.flaticon.com/512/4781/4781427.png' />
+            <AppList appName='マップ' color={BlueCol} iconName="map-marker" />
+            <AppList appName='時間割' color={GreenCol} test={props} jumpPage="TimeTable" iconName="file-table" />
           </View>
           <View style={styles.appListFlex}>
-            <AppList appName='SNS' color={YellowCol} url='https://cdn-icons-png.flaticon.com/512/6681/6681374.png' />
-            <AppList appName='' color={DefaultCol} url='https://upload.wikimedia.org/wikipedia/commons/5/59/Empty.png' />
+            <AppList appName='SNS' color={YellowCol} iconName="transit-connection-variant" />
+            <AppList appName='' color={DefaultCol} iconName="transit-connection-variant" />
           </View>
           <View style={styles.appListFlex}>
             <AppList appName='' color={DefaultCol} url='https://upload.wikimedia.org/wikipedia/commons/5/59/Empty.png' />
