@@ -7,6 +7,7 @@ import {useState} from 'react'
 
 const TimrTableView = () => {
   const [isShow,setIsShow]=useState(false)
+  const weekTime=[[{className:"在力"},{className:"1-2"}],[{className:"在力s"},{className:"2-2"}]]
   return (
     <View style={styles.bodys}>
       <View style={{left:'10%',top:110,}}>
@@ -22,14 +23,14 @@ const TimrTableView = () => {
         </View>
         <View style={styles.tableKoma} >
           <ClassFrame week={1} time={1} className="在力" onEventCallBack={()=>{setIsShow(true)}}/>
-          <ClassFrame className="在力リモートの変更"/>
+          <ClassFrame className={weekTime[1][0].className}/>
           <ClassFrame className="在力さ"/>
           <ClassFrame className="在力"/>
           <ClassFrame className="在力a"/>
         </View>
         <View style={styles.tableKoma}>
           <Text style={styles.koma}>宇宙地球</Text>
-          <Text style={styles.koma}></Text>
+          <ClassFrame className={weekTime[1][1].className}/>
           <Text style={styles.koma}></Text>
           <Text style={styles.koma}></Text>
           <Text style={styles.koma}></Text>

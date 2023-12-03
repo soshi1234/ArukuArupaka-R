@@ -16,6 +16,7 @@ const styles=StyleSheet.create({
     left:0,
     borderRadius:4,
     flexDirection:'column',
+    paddingTop:2,
   },
   determinationButton:{
     alignItems:'center',
@@ -29,8 +30,13 @@ const styles=StyleSheet.create({
   },
   InfoText:{
     flex:1,
+    with:'100%',
     alignContent:'right',
-    justifyContent: 'right'
+    justifyContent: 'right',
+    textAlign:'right',
+    alignItems:'right',
+    flexDirection:'row',
+
 
   },
   InfoTextTest:{
@@ -39,26 +45,52 @@ const styles=StyleSheet.create({
     //alignItems:'center',
     //backgroundColor:'blue',
     fontSize:18,
+  },
+  TextInputInfo:{ 
+    width: 80,
+    borderBottomWidth: 1,
+    backgroundColor: "#D9D9D9",
+    fontSize:18,
+    height:18,
+    marginTop:4,
+    color:'red',
+  },
+  TextInputText:{
+    color:'red,'
+  },
+  backText:{
+    width:80,
+    //textAlign:'center',
+    //alignItems:'center',
+    //backgroundColor:'blue',
+    fontSize:18,
+    width:100,
   }
 })
 
 const TimeTableInfo = (props) => {
+  const a=1;
   return (
     <View style={styles.infoDaialog}>
         <View style={styles.InfoText}>
           <Text style={styles.InfoTextTest}>教室</Text>
-          <TextInput style={{         width: "100%",
-          borderBottomWidth: 1,
-          borderBottomColor: "#ccc"}}><Text>aa</Text></TextInput>
+          <TextInput style={styles.TextInputInfo} value="S"></TextInput>
+          <Text style={styles.backText}></Text>
         </View>
         <View style={styles.InfoText}>
           <Text style={styles.InfoTextTest}>授業</Text>
+          <TextInput style={styles.TextInputInfo}></TextInput>
+          <Text style={styles.backText}></Text>
         </View>
         <View style={styles.InfoText}>
           <Text style={styles.InfoTextTest}>メモ</Text>
+          <TextInput style={styles.TextInputInfo}></TextInput>
+          <Text style={styles.backText}></Text>
         </View>
         <View style={styles.InfoText}>
           <Text style={styles.InfoTextTest}>通知時間</Text>
+          <TextInput style={styles.TextInputInfo}></TextInput>
+          <Text style={styles.backText}>  に通知する</Text>
         </View >
         <View style={{flexDirection:'row',flex:1,}}>
           <TouchableOpacity style={[styles.determinationButton,{backgroundColor:'#D9D9D9'}]} onPress={()=>{props.onEventCallBack()}}><Text style={{color:'#595959',fontSize:18,}}>OK</Text></TouchableOpacity>
