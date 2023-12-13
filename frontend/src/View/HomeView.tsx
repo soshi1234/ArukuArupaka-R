@@ -229,7 +229,7 @@ const HomeView = (props) => {
 
           <View style={styles.appListFlex}>
             <AppList appName='駐輪場' color={OrangeCol} test={props} jumpPage="Bike" iconName="bicycle"/>
-            <AppList appName='天気' color={WarningCol}  iconName="weather-cloudy" />
+            <AppList appName='天気' color={WarningCol} test={props} jumpPage="weather" iconName="weather-cloudy" />
           </View>
           <View style={styles.appListFlex}>
             <AppList appName='マップ' color={BlueCol} iconName="map-marker" />
