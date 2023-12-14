@@ -1,6 +1,6 @@
 import React from 'react';
 import {Text, View,StyleSheet,TouchableOpacity,TextInput} from 'react-native';
-
+import {useState} from 'react'
 
 
 const styles=StyleSheet.create({
@@ -50,10 +50,12 @@ const styles=StyleSheet.create({
     width: 80,
     borderBottomWidth: 1,
     backgroundColor: "#D9D9D9",
-    fontSize:18,
-    height:18,
-    marginTop:4,
-    color:'red',
+    fontSize:14,
+    height:24,
+    marginTop:0,
+    marginBottom:0,
+    padding:0,
+    paddingLeft:5,
   },
   TextInputText:{
     color:'red,'
@@ -69,31 +71,48 @@ const styles=StyleSheet.create({
 })
 
 const TimeTableInfo = (props) => {
+  const [infoDetail,setInfoDetail]=useState({
+    day:props.day,
+    period:props.period,
+    classRoom:props.pushFramDetail.classRoom,
+    className:props.pushFramDetail.className,
+    memo:props.pushFramDetail.memo,
+    notification:props.pushFramDetail.notification,
+  })
+  console.log(infoDetail);
   const a=1;
   return (
     <View style={styles.infoDaialog}>
         <View style={styles.InfoText}>
-          <Text style={styles.InfoTextTest}>教室</Text>
-          <TextInput style={styles.TextInputInfo} value="S"></TextInput>
-          <Text style={styles.backText}></Text>
-        </View>
-        <View style={styles.InfoText}>
           <Text style={styles.InfoTextTest}>授業</Text>
-          <TextInput style={styles.TextInputInfo}></TextInput>
+          <TextInput style={styles.TextInputInfo} autoFocus={true} clearTextOnFocus={true} onChangeText={(text) =>{setInfoDetail((prev)=>{prev.className=text; return prev});}}><Text>{infoDetail.className}</Text></TextInput>
           <Text style={styles.backText}></Text>
         </View>
+
+        <View style={styles.InfoText}>
+          <Text style={styles.InfoTextTest}>教室</Text>
+          <TextInput style={styles.TextInputInfo} onChangeText={(text) =>{setInfoDetail((prev)=>{prev.classRoom=text; return prev});}}><Text>{infoDetail.classRoom}</Text></TextInput>
+          <Text style={styles.backText}></Text>
+        </View>
+
+
         <View style={styles.InfoText}>
           <Text style={styles.InfoTextTest}>メモ</Text>
-          <TextInput style={styles.TextInputInfo}></TextInput>
+          <TextInput style={styles.TextInputInfo} onChangeText={(text) =>{setInfoDetail((prev)=>{prev.memo=text; return prev});}}>
+            <Text>{infoDetail.memo}</Text>
+          </TextInput>
           <Text style={styles.backText}></Text>
         </View>
+
         <View style={styles.InfoText}>
           <Text style={styles.InfoTextTest}>通知時間</Text>
-          <TextInput style={styles.TextInputInfo}></TextInput>
+          <TextInput style={styles.TextInputInfo} onChangeText={(text) =>{setInfoDetail((prev)=>{prev.notification=text; return prev});}}>
+            <Text>{infoDetail.notification}</Text>
+          </TextInput>
           <Text style={styles.backText}>  に通知する</Text>
         </View >
         <View style={{flexDirection:'row',flex:1,}}>
-          <TouchableOpacity style={[styles.determinationButton,{backgroundColor:'#D9D9D9'}]} onPress={()=>{props.onEventCallBack()}}><Text style={{color:'#595959',fontSize:18,}}>OK</Text></TouchableOpacity>
+          <TouchableOpacity style={[styles.determinationButton,{backgroundColor:'#D9D9D9'}]} onPress={()=>{props.onEventCallBack();props.onSudmit(infoDetail)}}><Text style={{color:'#595959',fontSize:18,}}>OK</Text></TouchableOpacity>
           <TouchableOpacity style={styles.determinationButton} onPress={()=>{props.onEventCallBack()}}><Text style={{color:'#595959'}}>キャンセル</Text></TouchableOpacity>
         </View>
     </View>

@@ -3,11 +3,15 @@ import {Text, View,TouchableOpacity} from 'react-native';
 
 
 const ClassFrame = (props) => {
+  const frameDetail={
+    day:props.day,
+    period:props.period,
+  }
   return (
     <TouchableOpacity
       style={{
         color:'black',
-        width:'20%',
+        width:'100%',
         backgroundColor:'white',
         height:'100%',
         lineHeight:35,
@@ -16,11 +20,19 @@ const ClassFrame = (props) => {
         borderWidth: 1,
         borderColor: '#888888',
         borderRadius: 10, 
-      }}onPress={()=>{props.onEventCallBack()}}>
+      }}onPress={()=>{props.onEventCallBack(frameDetail)}}>
       <Text style={{
+                marginTop:5,
                 color:'black',
                 textAlign:'center', 
+                height:60,
             }}>{props.className}</Text>
+            <Text style={{
+              color:'black',
+              textAlign:'center',
+              bottom:0,
+              fontSize:12,
+              }}>{props.TimeTableDate.classRoom}</Text>
     </TouchableOpacity>
   );
 };
